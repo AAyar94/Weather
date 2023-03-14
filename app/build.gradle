@@ -6,6 +6,9 @@ apply plugin: 'com.google.dagger.hilt.android'
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: 'kotlin-parcelize'
 
+def localProperties = new Properties()
+localProperties.load(new FileInputStream(rootProject.file("local.properties")))
+
 android {
     namespace 'com.aayar94.weather'
     compileSdk 33
@@ -17,7 +20,12 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
+        //testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes.each {
+        it.buildConfigField('String', 'API_KEY', localProperties.WEATHER_API_KEY)
     }
     buildFeatures {
         viewBinding true
@@ -34,9 +42,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
-    }
-    buildFeatures {
-        viewBinding true
     }
 }
 kapt {
