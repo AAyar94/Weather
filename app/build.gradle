@@ -21,7 +21,6 @@ android {
         versionName "1.0"
 
 
-
         //testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes.each {
@@ -87,4 +86,7 @@ dependencies {
 
     // Swipe Refresh Layout
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+// Lottie Animation View
+    implementation "com.airbnb.android:lottie:5.2.0"
 }

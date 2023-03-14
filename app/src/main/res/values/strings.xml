@@ -45,4 +45,7 @@
     </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hourly">Hourly</string>
+    <string name="upcoming_hours">Upcoming Hours</string>
+    <string name="next_days">Next Days</string>
 </resources>
